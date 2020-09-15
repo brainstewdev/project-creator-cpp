@@ -1,7 +1,7 @@
 # ignore everything
 *
 # except the script and git files
-!cppProjCreator
+!gen++
 !.gitignore
 !install
 !uninstall
