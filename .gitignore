@@ -1,5 +1,6 @@
 # ignore everything
 *
 # except the script and git files
-!cppProjCreator.sh
+!cppProjCreator
 !.gitignore
+!install
