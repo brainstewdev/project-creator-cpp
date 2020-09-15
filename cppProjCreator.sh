@@ -12,9 +12,15 @@ cd $1
 # crea le sottocartelle
 #	src
 #	include
+echo 'creating the src and include directories...'
 mkdir src include
+echo '	done'
 # crea il file main.cpp
+echo 'creating the Main.cpp file...'
 user=$(whoami)
 dateOfCreation=$(date)
 comm="// ${dateOfCreation}\n// ${user}\n\n#include<iostream>\n\nusing namespace std;\n\nint main() {\n\n}"
 echo -e ${comm} > ./src/Main.cpp
+echo '	done'
+echo 'creating the cmake file...'
+printf "cmake_minimum_required(VERSION 3.10)\nproject(%s)\nfile(GLOB SOURCES ./src/*)\nadd_executable(%s %s)\ntarget_include_directories(%s PUBLIC %s)" "${1}" "${1}" "\${SOURCES}" "${1}" '"./include"'> CMakeLists.txt
