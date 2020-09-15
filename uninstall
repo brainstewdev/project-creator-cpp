@@ -1,2 +1,2 @@
 # remove the script from the /usr/local/bin dir
-rm /usr/local/bin/cppProjCreator
+rm /usr/local/bin/gen++

@@ -1,2 +1,2 @@
 # put the script into the usr/local/bin directory
-cp cppProjCreator /usr/local/bin
+cp gen++ /usr/local/bin
