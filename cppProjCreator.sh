@@ -14,7 +14,7 @@ cd $1
 #	include
 mkdir src include
 # crea il file main.cpp
-user=whoami
-dateOfCreation=date
-comm="${dateOfCreation}\n${user}\n\n#include<iostream>\n\nusing namespace std;\n\nint main() {\n\n}"
-echo comm > ./src/Main.cpp
+user=$(whoami)
+dateOfCreation=$(date)
+comm="// ${dateOfCreation}\n// ${user}\n\n#include<iostream>\n\nusing namespace std;\n\nint main() {\n\n}"
+echo -e ${comm} > ./src/Main.cpp
