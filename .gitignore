@@ -1,0 +1,5 @@
+# ignore everything
+*
+# except the script and git files
+!cppProjCreator.sh
+!.gitignore
