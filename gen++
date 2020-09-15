@@ -24,3 +24,5 @@ echo -e ${comm} > ./src/Main.cpp
 echo '	done'
 echo 'creating the cmake file...'
 printf "cmake_minimum_required(VERSION 3.10)\nproject(%s)\nfile(GLOB SOURCES ./src/*)\nadd_executable(%s %s)\ntarget_include_directories(%s PUBLIC %s)" "${1}" "${1}" "\${SOURCES}" "${1}" '"./include"'> CMakeLists.txt
+echo '	done'
+echo 'finished creation of the project.'
