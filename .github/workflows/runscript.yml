@@ -29,6 +29,6 @@ jobs:
       - name: test
         run: |
           ls
-          sudo install
+          sudo ./install
           gen++ test
-          sudo uninstall
+          sudo ./uninstall
